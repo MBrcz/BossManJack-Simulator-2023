@@ -21,40 +21,14 @@ There are for types reactions of Bossman can have for shown events:
 	e) bigwin [currently 1 different clips, NOT IMPLEMENTED YET].
 
 If you are intrested more about the clips and the source material - check the ~/Reactions Table.xlsx file.
+There is stored there simple analyssis of reactions, each reaction source with author and timestamps from videos.
 
 As for today, there are implemented following games:
 	1) YesNo     - it is basically a coin flip, but with 25 % chance of winning, based on this reddit post:
 		       https://www.reddit.com/r/bossmanjack/comments/1bqfwqo/new_game_made_just_for_the_boss/,
-
-	2) Mines     - it works similary to minesweeper, but with this difference, that in case of not finding mine, player
-		       do not get visual feedback when mine can be found. The more not mines (aka Gems) player can find, the more money will he get by         
-                       cashing out (multiplier is 1.05 of waged money for each gem found). In case of finding a mine, game is ending and player loses all 
-                       waged money. Also it is worth noting, that this game is agressively rigged against the player (this is author design choice).
-		       
-		       In normal case, durning the initialization of the game, the game should be storing a 2D array with positions of mines and gems.
-                       However, in this case, game decides whether player has found a mine ad hoc using a formula: RND() * 100 >= 30 + (Gems found * 10), where
-                       RND() is a random number from 0 to 1. Therefore it is not likely player will ever score more than 7 gems. In case of
-                       encountering the mine, game ad hoc invents "position" that player was moving around current session. Therefore, it does not matter where player
-                       chooses cells, and how many mines are present on the board. The cashout is calculated as 
-                       = (waged money mult x (0.1 * found gems)) * found gems * waged money 
-		       Waged money mult is a constans and it's equal to 1.05.
-	
-	3) Keno      - I do not know who, invented this game, but this person should be locked deep inside a prison and isolated from society. It is HIGHLY additcive 
-                       (even for the standards of traditional gambling games). The game consists of board with 40 cells numered 1 to 40. Durning the initialization of 
-                       the board 10 cells are randomly chosen to be a "target cells" (they are in violet/purple color). Through selecting play button, player draws 10 
-                       random cells from the board, the more target cells shall be drawn, the bigger payback will. For the drawing procedure is responsible software (code).
-		       The table for payback in Keno in this case are as follows:
-
-                       Multiplier || 0.00x  ||  0.00x  ||  0.00x  ||  0.00x  ||  3.50x  ||  8.00x  ||  13.00x  ||  63.00x  ||  500.00x  ||  800.00x  || 1000.00x
-           	       ----------------------------------------------------------------------------------------------------------------------------------------
-		       Target hit || 0x     ||  1x     ||  2x     ||  3x     ||  4x     ||  5x     ||  6x      ||  7x      ||  8x       ||  9x       || 10x		       
-		       
-		       The ammount of won money is calculated as (multiplier * waged money). In order to skew game a little (becouse durning playtests I noticed
-		       that wins (3.5x+) are happening definetelly too often and too consistently [or I and my tester were especially lucky]), whenever the game founds a 
-                       target cell, there is 20% chance that it will be discarded and draw will be repeated for this current iteration.
-
-	It is worth noting, that those games are only my own implentation, real casinos might use much more complicated and dirtier tricks in order to skew games (like 	
-diminishing returns on wins, causing fake win streaks and big payouts for newer accounts, etc, manipulating accounts chances on getting win / losses.
+	2) Mines     - minesweeper, but a little bit more rigged.
+	3) Keno      - random number generator on steroids - from 40 cells player must hit the highest ammount possible from 10 chosen.
+                       More chosen cells hitted - the bigger payout.
 
 -----------
 Project is in EARLY version.

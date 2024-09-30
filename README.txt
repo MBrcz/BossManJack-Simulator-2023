@@ -6,6 +6,14 @@ Updated 2  : 5/26/2024
 Updated 3  : 9/30/2024 (ad-hoc update)
 ------------------------------------------
 
+-----------------------------------------------------------------------------------------------------------------------
+UPDATE 3:
+Project is not finished - right now I will not continue working towards it due to the loss of intrest in the topic.
+One day in the future - I shall return and finish it.
+But not today, nor tomorrow.
+----------------------------------------------------------------------------------------------------------------------
+
+
 The basic idea of this repository is to mimic few popular or custom gambling games and code the hypothethical reaction to them of ex-kick streamer Austin Peterson, aka Bossman Jack. Project is written in VBA (using Microsoft Excel 2021 Software), and assets are extracted from various youtuber's clips and videos of Bossman Jack (modified via Python opencv2 and moviepy libraries). 
 Youtubers, which clips I used for this project:
 	a) https://www.youtube.com/@ColonelRat,

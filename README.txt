@@ -3,6 +3,7 @@ BOSSMAN JACK SIMULATOR IN EXCEL 2023 demo
 First Entry: 4/21/2024
 Updated 1  : 4/28/2024
 Updated 2  : 5/26/2024
+Updated 3  : 9/30/2024 (ad-hoc update)
 ------------------------------------------
 
 The basic idea of this repository is to mimic few popular or custom gambling games and code the hypothethical reaction to them of ex-kick streamer Austin Peterson, aka Bossman Jack. Project is written in VBA (using Microsoft Excel 2021 Software), and assets are extracted from various youtuber's clips and videos of Bossman Jack (modified via Python opencv2 and moviepy libraries). 
